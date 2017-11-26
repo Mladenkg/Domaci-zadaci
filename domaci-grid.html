@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Domaći zadatak "grid"</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 10px;
+            
+        }
+
+
+        .container > div {
+            height: 100px;
+            background-color: deeppink;
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+            font-size: 30px;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div><p>box 1</p></div>
+    <div><p>box 2</p></div>
+    <div><p>box 3</p></div>
+    <div><p>box 4</p></div>
+    <div><p>box 5</p></div>
+    <div><p>box 6</p></div>
+    
+    
+</div>
+
+<!--
+    U okviru body taga, dodajte content tako da vam html izgleda kada otvorite u browseru kao na PrtSc-u koji sam vam poslala. 
+    Vidite da je jedan deo u containeru, drugi deo je van.
+    Imate ispisane boje koje se koriste, i obratite paznju na text, ne mora da ispisujete isti tekst, može da piše šta god, ali vidite text-align.
+    Boje nemojte da dodajete direktno inline, niti na class-e col- već napravite nove class-e koje će imati background-color, a klase nazovite po bojama ili kako vi želite.
+-->
+
+</body>
+
+</html>
