@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-gap: 20px;
+
+        }
+
+        .container>div {
+            background: pink;
+            padding: 5px;
+            margin-top: 10px;
+
+            line-height: 150px;
+            color: white;
+            font-weight: bold;
+            font-size: 3em;
+            text-align: center;
+
+        }
+
+        .item1 {
+            grid-column: 1/6;
+        }
+
+        .item3 {
+            grid-column: 2/5;
+            grid-row: 2/3;
+        }
+
+        .item5 {
+            grid-column: 1/4;
+            grid-row: 3/4;
+        }
+
+        .item6 {
+            grid-column: 1/4;
+            grid-row: 4/5;
+        }
+
+        .item7 {
+            grid-column: 4/6;
+            grid-row: 3/5;
+        }
+
+        .item8 {
+            grid-column: 1/6;
+            /*            grid-row: 3/5;*/
+        }
+
+        @media all and (max-width: 800px) {
+
+            .item1 {
+                grid-area: 1 / span 3 / 2;
+            }
+            .item2 {
+                grid-area: 2 / span 3 / 2 / 4;
+            }
+            .item3 {
+                grid-area: 3/ span 3 /2/4;
+            }
+            .item7{grid-area: 4 /span 3 / 2 / 4; }
+            .item4{grid-area: }
+
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!--
+
+    Domaci:
+    - napravite grid
+    - pet kolona
+    - pet redova
+    - prvi red: header
+    - drugi red: left-side(1/5), main (3/5), right-side(1/5)
+    - treci red: left box (3/5) i right box (2/5)
+    - cetvrti red: left box (3/5) i right box (2/5), s tim što ovaj right box je jedan element, ili item7
+    - peti red: footer
+    - prostor između item-a da bude 20px
+    = na rezolucijama ispod 800px da svaki element zauzima 50% 
+
+-->
+
+    <div class="container">
+
+        <div class="item1">header</div>
+        <div class="item2">left-side</div>
+        <div class="item3">main</div>
+        <div class="item4">right-side</div>
+        <div class="item5">left-box</div>
+        <div class="item6">left-box1</div>
+        <div class="item7">right-box</div>
+        <div class="item8">footer</div>
+    </div>
+
+</body>
+
+</html>

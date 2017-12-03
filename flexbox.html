@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        
+        .flex-container {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-flow: row-reverse wrap;
+            
+
+
+        }
+
+        .flex-container>li {
+            background: pink;
+            padding: 5px;
+            color: white;
+            font-weight: bold;
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .flex-item6 {
+
+            min-width: 34%;
+        }
+
+        .flex-item5 {
+            flex-basis: 63%;
+        }
+
+        .flex-item2 {
+            flex-basis: 34%;
+        }
+
+        .flex-item11 {
+            order: 6;
+        }
+
+        .flex-item22 {
+            order: 3;
+        }
+
+        .flex-item33 {
+            order: 4;
+        }
+
+        .flex-item44 {
+            order: 5;
+        }
+
+        .flex-item55 {
+            order: 1;
+        }
+        .flex-item66{
+            order: 2;
+        }
+
+        @media all and (max-width: 800px) {
+
+           .item1{grid-area: 1/6;}
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!--
+
+    Domaci:
+    - liste poredjajte tako da svaka bude u narednom redu
+    - a item-i u okviru prve liste poređajte sledećim redosledom 6 5 4 3 2 1 i da 6 ima širinu 36%, 5:63%, 2:34% ali da to ne definišete inline niti preko width-a. 
+    - item-i u okviru druge liste 1 4 3 2 6 5
+
+    svi item-i liste na rezoluciji manjoj od 800px da zauzimaju 50% širine, ali da je ne definišete preko width
+-->
+
+
+    <ul class="flex-container">
+
+        <li class="flex-item1">1</li>
+        <li class="flex-item2">2</li>
+        <li class="flex-item3">3</li>
+        <li class="flex-item4">4</li>
+        <li class="flex-item5">5</li>
+        <li class="flex-item6">6</li>
+    </ul>
+
+    <ul class="flex-container second">
+
+        <li class="flex-item11">1</li>
+        <li class="flex-item22">2</li>
+        <li class="flex-item33">3</li>
+        <li class="flex-item44">4</li>
+        <li class="flex-item55">5</li>
+        <li class="flex-item66">6</li>
+    </ul>
+
+
+</body>
+
+</html>
